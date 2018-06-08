@@ -56,19 +56,66 @@ fill()
 通过填充路径的内容区域生成实心的图形。
 ````
 ````js
-function draw() { // 实心三角形
+function draw() {
   var canvas = document.getElementById('canvas');
   if (canvas.getContext){
-   var ctx = canvas.getContext('2d');
-   ctx.beginPath();
-   ctx.moveTo(75,50);
-   ctx.lineTo(100,75);
-   ctx.lineTo(100,25);
-   ctx.fill();
+    var ctx = canvas.getContext('2d');
+    // 填充三角形
+    ctx.beginPath();
+    ctx.moveTo(25,25);
+    ctx.lineTo(105,25);
+    ctx.lineTo(25,105);
+    ctx.fill();
+    // 描边三角形
+    ctx.beginPath();
+    ctx.moveTo(125,125);
+    ctx.lineTo(125,45);
+    ctx.lineTo(45,125);
+    ctx.closePath();
+    ctx.stroke();
   }
 }
 ````
-<img src="https://mdn.mozillademos.org/files/9847/triangle.png" />  
+<img src="https://mdn.mozillademos.org/files/238/Canvas_lineTo.png" />  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
